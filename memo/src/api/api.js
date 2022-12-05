@@ -1,7 +1,9 @@
-
-import * as firebase from "firebase/app";
-import "firebase/database";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/database';
+//import * as firebase from "firebase/app";
+//import "firebase/database";
 import { getMemoListSuccess, getMemoListFailure } from '../actions/index';
+
 const firebaseConfig = {
     apiKey: "AIzaSyDR1vNn_NnySuyRw7Y4ofX3mO-s4VkMSYM",
     authDomain: "ssssssssssss-a67e5.firebaseapp.com",
@@ -11,9 +13,10 @@ const firebaseConfig = {
     appId: "1:310050251449:web:88cdba05096e7634457168",
     measurementId: "G-8LXHBJTZVP"
 };
- 
 firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+
+let database = firebase.database();
+
 
 
 	

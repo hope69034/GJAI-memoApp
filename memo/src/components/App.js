@@ -9,12 +9,12 @@ import './css/App.css';
 import MemoDetail from './MemoDetail';
 import {Routes} from "react-router-dom";
  
- 
+
 class App extends React.Component {
   componentDidMount() {
     this.props.onMemoListLoad();
   }
- 
+
   render() {
     const {
       isLoading,
@@ -79,10 +79,10 @@ class App extends React.Component {
                 <MemoList
                   {...routerProps}
                   memoList={memoList}
+                  // isSending={isSending}
+                  //onMemoDelete={onMemoDelete}
                   //isSending={isSending}
                   //onMemoDelete={onMemoDelete}
-                  isSending={isSending}
-                  onMemoDelete={onMemoDelete}
                 />
               )}
             />

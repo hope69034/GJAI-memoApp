@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { faPen, faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MemoWrite from '../containers/MemoWrite';
-//import { setTimeForm } from '../utils/utils';
+import { setTimeForm } from '../utils/utils';
 
 function MemoList(props)  {
     const {
@@ -66,7 +66,7 @@ function MemoList(props)  {
                   <h2 className="memo-title">{memo.title}</h2>
                   <div className="memo-content">{memo.content}</div>
                   <span className="memo-date">
-                    {/* {setTimeForm(memo.createdAt)} */}
+                {setTimeForm(memo.createdAt)}  
                   </span>
                 </Link>
                 <button
