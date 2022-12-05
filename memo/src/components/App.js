@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route  } from 'react-router';
-import { Navigate } from 'react-router';
+import { Navigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { faFish } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,7 @@ import './css/App.css';
 import MemoDetail from './MemoDetail';
 import {Routes} from "react-router-dom";
  
+
 
 class App extends React.Component {
   componentDidMount() {
@@ -71,15 +72,16 @@ class App extends React.Component {
         </header>
         <div className="memo-container">
           <Routes>
-            <Navigate exact from="/" to="/memos" />
- 
+            {/* <Navigate exact from="/" to="/memos" /> */}
+          {/* <Navigate  from="/" to="/memos" />  */}
+            
             <Route
               exact path="/memos"
               render={routerProps => (
                 <MemoList
                   {...routerProps}
                   memoList={memoList}
-                  // isSending={isSending}
+                  //isSending={isSending}
                   //onMemoDelete={onMemoDelete}
                   //isSending={isSending}
                   //onMemoDelete={onMemoDelete}

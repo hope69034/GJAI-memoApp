@@ -7,6 +7,7 @@ import { getMemoListSuccess, getMemoListFailure } from '../actions/index';
 const firebaseConfig = {
     apiKey: "AIzaSyDR1vNn_NnySuyRw7Y4ofX3mO-s4VkMSYM",
     authDomain: "ssssssssssss-a67e5.firebaseapp.com",
+    authDomain: "https://ssssssssssss-a67e5-default-rtdb.firebaseio.com/",
     projectId: "ssssssssssss-a67e5",
     storageBucket: "ssssssssssss-a67e5.appspot.com",
     messagingSenderId: "310050251449",
