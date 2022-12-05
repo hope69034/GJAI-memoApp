@@ -1,7 +1,7 @@
+
 import * as firebase from "firebase/app";
 import "firebase/database";
 import { getMemoListSuccess, getMemoListFailure } from '../actions/index';
- 
 const firebaseConfig = {
     apiKey: "AIzaSyDR1vNn_NnySuyRw7Y4ofX3mO-s4VkMSYM",
     authDomain: "ssssssssssss-a67e5.firebaseapp.com",
@@ -28,7 +28,7 @@ export const getMemoListApi = (dispatch) => {
     });
   };
 
-  	
+
 export const sendMemoApi = newMemo => {
     const {
       id,
@@ -38,7 +38,7 @@ export const sendMemoApi = newMemo => {
     } = newMemo;
    
     return new Promise((resolve, reject) => {
-      firebase.database().ref('memos/' + id).set({
+      database.ref('memos/' + id).set({
         title,
         content,
         created_at: createdAt
@@ -50,7 +50,7 @@ export const sendMemoApi = newMemo => {
    
   export const delMemoApi = memoId => {
     return new Promise((resolve, reject) => {
-      firebase.database().ref('memos/' + memoId).set(null)
+      database.ref('memos/' + memoId).set(null)
         .then(() => resolve())
         .catch(() => reject());
     })

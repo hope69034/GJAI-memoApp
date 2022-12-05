@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getMemoListApi } from '../api/api';
+import { getMemoListApi,delMemoApi } from '../api/api';
 import * as action from '../actions/index';
 import { camelizeKey } from '../utils/utils';
 import App from '../components/App';

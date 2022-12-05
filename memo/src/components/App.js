@@ -1,10 +1,14 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router';
+import { Route  } from 'react-router';
+import { Navigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { faFish } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MemoList from './MemoList';
 import './css/App.css';
+import MemoDetail from './MemoDetail';
+import {Routes} from "react-router-dom";
+ 
  
 class App extends React.Component {
   componentDidMount() {
@@ -66,8 +70,8 @@ class App extends React.Component {
           </h1>
         </header>
         <div className="memo-container">
-          <Switch>
-            <Redirect exact from="/" to="/memos" />
+          <Routes>
+            <Navigate exact from="/" to="/memos" />
  
             <Route
               exact path="/memos"
@@ -75,6 +79,8 @@ class App extends React.Component {
                 <MemoList
                   {...routerProps}
                   memoList={memoList}
+                  //isSending={isSending}
+                  //onMemoDelete={onMemoDelete}
                   isSending={isSending}
                   onMemoDelete={onMemoDelete}
                 />
@@ -94,7 +100,7 @@ class App extends React.Component {
                 )
               }}
             />
-          </Switch>
+          </Routes>
         </div>
       </div>
     );

@@ -8,14 +8,17 @@ import { HashRouter as Router } from 'react-router-dom';
 import rootReducer from './reducers/reducers';
 import App from './containers/App';
 import './index.css';
- 
+import { BrowserRouter } from 'react-router-dom';
 const store = createStore(rootReducer, applyMiddleware(logger));
  
 ReactDOM.render(
   <Provider store={store}>
+   <BrowserRouter>
     <Router>
       <App />
     </Router>
-  </Provider>,
+ </BrowserRouter>
+  </Provider>
+  ,
   document.getElementById('root')
 );

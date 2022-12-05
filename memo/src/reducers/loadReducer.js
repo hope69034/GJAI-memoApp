@@ -1,10 +1,13 @@
+import * as types from '../constants/actionTypes';
+ 
+
 const initState = {
     isLoading: true,
     isError: false,
     memoList: null
   };
-   
-  const loadReducer = (state = initState, action) => {
+  
+export default function loadReducer(state = initState, action)  {
     switch (action.type) {
       case types.GET_MEMO_LIST_SUCCESS:
         return {

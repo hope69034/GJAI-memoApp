@@ -1,5 +1,5 @@
 import React from 'react';
-import { setTimeForm } from '../utils/utils';
+//import { setTimeForm } from '../utils/utils';
  
 const MemoDetail = props => {
   const {
@@ -30,7 +30,7 @@ const MemoDetail = props => {
       </div>
       <div className="data-area">
         <span className="memo-date">
-          {setTimeForm(createdAt)}
+         {/*  {setTimeForm(createdAt)} */}
         </span>
       </div>
     </div>
